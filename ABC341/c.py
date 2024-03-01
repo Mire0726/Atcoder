@@ -1,12 +1,4 @@
-Vec = {
-    'D': (1, 0),
-    'U': (-1, 0),
-    'R': (0, 1),
-    'L': (0, -1)
-}
-
-def isOK(i,j):
-    if i+1
+result=0
 
 H,W,N=map(int,input().split())
 T=input()
@@ -18,5 +10,24 @@ for i in range(1,H-1):
             continue
         x=i
         y=j
+        r=True
+        for k in range(N):
+            if T[k] =="L":
+                x-=1
+            elif T[k]=="R":
+                x+=1
+            elif T[k] == "U":
+                y-=1
+            elif T[k] == "D":
+                y+=1
+            if S[x][y]=="#":
+                r=False
+                break
+        if r==True:
+            result+=1
+        
+print(result)
+
+
         
 
